@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trade.css"/>
+    <title>Keal Trade</title>
+</head>
+<body>
+    <header>
+        <h1>Trade Monitor</h1>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="#dashboard">Dashboard</a></li>
+            <li> <a href="#live-data">Live Market Data</a></li>
+            <li> <a href="#open-trades"> Open Trades</a></li>
+            <li> <a href="#trade-history">Trade History</a></li>
+            <li> <a href="#watchlist">Watchlist</a></li>
+        </ul>
+    </nav>
+<main>
+        <!-- My Dashboard Section-->
+<section id="Dashboard">
+    <h2>Dashboard</h2>
+    <div class="stats">
+    <p>Account Balance:<span id="account-balance">$0.00</span></p>
+    <p>Open P/L:<span id="open-pl">0%</span></p>
+    </div>
+</section>
+
+        <!-- Live Market Section-->
+<section id="live-data">
+    <h2>Live Market</h2>
+    <div class="market-data"></div>
+</section>
+
+         <!-- Open Trade section-->
+<section id="Open-trades">
+    <h2>Open Trades</h2>
+    <table>
+    <thead>
+    <tr>
+        <th>Pair</th>
+        <th>Entry</th>
+        <th>Current</th>
+        <th>P/L</th>
+    </tr>
+    </thead>
+    <tbody id="open-trades-body"></tbody>
+    </table>
+</section>
+
+          <!-- Trade History-->
+<section id="trade-history">
+    <h2>Trade History</h2>
+    <table>
+    <thead>
+    <tr>
+        <th>Pair</th>
+        <th>Entry</th>
+        <th>Exit</th>
+        <th>P/L</th>
+    </tr>
+    </thead>
+    <tbody id="trade-history-body"></tbody>
+    </table>
+</section>
+
+    <!-- Watchlist Section-->
+<section id="watchlist">
+    <h2>Watchlist</h2>
+    <ul id="watchlist-items"></ul>
+</section>
+</main>
+
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  // Example account info (static for now)
+  const accountBalance = 1000;
+  const openPL = "+3.2%";
+  document.getElementById("account-balance").textContent = `$${accountBalance}`;
+  document.getElementById("open-pl").textContent = openPL;
+
+  // Fetch live market data
+  fetchLiveMarketData();
+
+  // Mock open trades (these would be dynamic if you integrate with your exchange API)
+  const openTrades = [
+    { pair: "BTC/USDT", entry: "$66,000", current: "$68,000", pl: "+3%" },
+    { pair: "ETH/USDT", entry: "$3,000", current: "$3,200", pl: "+6.7%" },
+  ];
+  updateOpenTrades(openTrades);
+
+  // Mock trade history
+  const tradeHistory = [
+    { pair: "SOL/USDT", entry: "$120", exit: "$150", pl: "+25%" },
+    { pair: "ADA/USDT", entry: "$0.4", exit: "$0.6", pl: "+50%" },
+  ];
+  updateTradeHistory(tradeHistory);
+
+  // Mock watchlist
+  const watchlist = ["BTC/USDT", "ETH/USDT", "SOL/USDT"];
+  updateWatchlist(watchlist);
+});
+
+// Fetch live market data from CoinGecko
+fetchLiveMarketData();
+setInterval(fetchLiveMarketData, 30000);
+
+async function fetchLiveMarketData() {
+  const marketDataDiv = document.getElementById("market-data");
+  marketDataDiv.innerHTML = "<p>Loading market data...</p>";
+
+  try {
+    const response = await fetch(
+      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd"
+    );
+    const data = await response.json();
+
+    // Clear previous data
+    marketDataDiv.innerHTML = "";
+
+    // Display prices
+    const pairs = [
+      { name: "BTC/USDT", id: "bitcoin" },
+      { name: "ETH/USDT", id: "ethereum" },
+      { name: "SOL/USDT", id: "solana" },
+    ];
+
+    pairs.forEach((pair) => {
+      const price = data[pair.id].usd;
+      const p = document.createElement("p");
+      p.textContent = `${pair.name}: $${price.toLocaleString()}`;
+      marketDataDiv.appendChild(p);
+    });
+  } catch (error) {
+    marketDataDiv.innerHTML = "<p>Error fetching market data.</p>";
+    console.error(error);
+  }
+}
+
+function updateOpenTrades(trades) {
+  const tbody = document.getElementById("open-trades-body");
+  tbody.innerHTML = "";
+  trades.forEach((trade) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${trade.pair}</td>
+      <td>${trade.entry}</td>
+      <td>${trade.current}</td>
+      <td>${trade.pl}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+function updateTradeHistory(trades) {
+  const tbody = document.getElementById("trade-history-body");
+  tbody.innerHTML = "";
+  trades.forEach((trade) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${trade.pair}</td>
+      <td>${trade.entry}</td>
+      <td>${trade.exit}</td>
+      <td>${trade.pl}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+function updateWatchlist(pairs) {
+  const list = document.getElementById("watchlist-items");
+  list.innerHTML = "";
+  pairs.forEach((pair) => {
+    const li = document.createElement("li");
+    li.textContent = pair;
+    list.appendChild(li);
+  });
+}
+
+</script>
+
+
+</body>
+</html>

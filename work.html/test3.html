@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="currency-converter">
+        <h2>Currency Converter </h2>
+        <div class="converter-row">
+            <input type="number" id="amount" placeholder="Amount" min="0"/>
+            <select id="from-currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="NGN">NGN</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <span>to</span>
+            <select id="to-currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="NGN">NGN</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </div>
+        <button onclick="convertCurrency()">Convert</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        const rates = {
+            USD: {USD: 1, EUR: 0.92, NGN: 1500, GBP: 0.79},
+            EUR: {USD: 1.09, EUR: 1, NGN: 1630, GBP: 0.86},
+            NGN: {USD: 0.00067, EUR: 0.00061, NGN: 1, GBP: 0.00053},
+            GBP: {USD: 1.27, EUR: 1.16, NGN: 1880, GBP: 1}
+        };
+
+        function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const from = document.getElementById('from-currency').value;
+            const to = document.getElementById('to-currency').value;
+            const resultDiv = document.getElementById('result');
+            if (isNaN(amount) ||  amount <= 0) {
+                resultDiv.textContent = "Please enter a valid amount.";
+                return;
+            }
+            const rate = rates[from][to];
+            const converted = (amount * rate).toFixed(2);
+            resultDiv.textContent = `${amount} ${from} = ${converted} ${to}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Keal Retail - Nigeria's #1 Oline Shopping Destination</title>
+</head>
+<body>
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-content">
+                <div class="header-top-left">
+                    <span> Call to order: 0700-600-100</span>
+                    <span>Free delivery on thousands of items</span>
+                </div>
+                <div class="header-top-right">
+                    <a href="#">Sell on Keal</a>
+                    <a href="#">Keal-Retail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header main-->
+    <header class="header-main">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Keal-Retail</div>
+                <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search products, brands and categories">
+                    <button class="search-btn">Search</button>
+                </div>
+                </div>
+                <div class="header-actions">
+                    <a href="#" class="help-link">Help ?</a>
+                    <a href="#" class="account-link"> Account</a>
+                    <a href="#" class="cart-link" onclick="toggleCart()">
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Navigation-->
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="all-categories">
+                    = All Categories
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#flash-sales">Flash Sales</a></li>
+                    <li><a href="#phones">Phones & Tablets</a></li>
+                    <li><a href="#electronics">Electronics</a></li>
+                    <li><a href="#fashion">Fashion</a></li>
+                    <li><a href="#home">Home & Office</a></li>
+                    <li><a href="#health">Health & Beauty</a></li>
+                    <li><a href="#sports">Sports & Fitness</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Banner-->
+    <section class="banner-section">
+        <div class="container">
+            <div class="main-layout">
+                <!--Categories Sidebar-->
+                <div class="sidebar">
+                    <div class="sidebar-title">Categories</div>
+                    <div class="sidebar-content">
+                        <div class="sidebar-item">Phones & Tablet</div>
+                        <div class="sidebar-item">Computing</div>
+                        <div class="sidebar-item">Electronics</div>
+                        <div class="sidebar-item">Fashion</div>
+                        <div class="sidebar-item">Home & Office</div>
+                        <div class="sidebar-item">Health & Beauty</div>
+                        <div class="sidebar-item">Baby Products</div>
+                        <div class="sidebar-item">Gaming</div>
+                        <div class="sidebar-item">Sports & Fitness</div>
+                        <div class="sidebar-item">Automobile</div>
+                    </div>
+                </div>
+                <!--Main Banner-->
+                <div class="banner-slider">
+                    <div class="banner-slide">
+                        <div class="banner-content">
+                            <h2>Best Deals in Nigeria</h2>
+                            <p>Up to 70% OFF on selected items</p>
+                            <a href="#products" class="shop-now-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Quick Actions-->
+                <div class="quick-actions">
+                    <div class="quick-action">
+                        <div class="quick-action-icon"></div>
+                        <div class="quick-action-text">Official Store</div>
+                    </div>
+                    <div class="quick-action">
+                        <div class="quick-action-icon"></div>
+                        <div class="quick-action-text">Bulk Purchase</div>
+                    </div>
+                    <div class="quick-action">
+                        <div class="quick-action-icon"></div>
+                        <div class="quick-action-text">Pay on Delivery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flash-sales" id="flash-sales">
+        <div class="container">
+            <div class="flash-header">
+                <div class="flash-title"> Flash Sales
+            </div>
+            <div class="flash-timer">
+                Time Left:
+                <div class="timer-box">12</div>:
+                <div class="timer-box">45</div>:
+                <div class="timer-box">30</div>
+            </div>
+        </div>
+        <div class="flash-products" id="flashSalesGrid">
+            <!--Flash sale products will be loaded here-->
+        </div>
+        </div>
+    </section>
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Category</h2>
+                <a href="#" class="see-all">SEE ALL</a>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon"></div>
+                    <div class="category-name">Phone & Tablets</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"></div>
+                    <div class="category-name">Electronics</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"></div>
+                    <div class="category-name">Fashion</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"></div>
+                    <div class="category-name">Home & Office</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"></div>
+                    <div class="category-name">Health & Beauty</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"></div>
+                    <div class="category-name">Gaming</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Top Deals-->
+    <section class="top-deals">
+        <div class="container">
+            <div class="deals-header">Top Deals</div>
+            <div class="flash-products" id="topDealsGrid">
+                <!--Top Deals products will be added here-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products-->
+     <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+            <h2 class="section-title">Recommended for You!</h2>
+            <a href="#" class="see-all">SEE ALL</a>
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded here-->
+        </div>
+        </div>
+     </section>
+
+     <!-- Brand Store-->
+      <section class="brand-store">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Brand</h2>
+                <a href="#" class="see-all">SEE ALL</a>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-logo">Samsung</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">Apple</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">Xiaomi</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">HP</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">Nike</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">Adidas</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">Dell</div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">LG</div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Services-->
+       <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Shop with Keal-Retail ?</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon"></div>
+                    <div class="services-title">Free Delivery</div>
+                    <div class="service-desc">Free shipping on orders above #50,000 nationwide</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"></div>
+                    <div class="service-title">Pay on Delivery</div>
+                    <div class="service-desc">Pay cash when your order arrives at your doorstep</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"></div>
+                    <div class="service-title">Easy Returns</div>
+                    <div class="service-desc">Free & easy returns within 7 days of delivery</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"></div>
+                    <div class="service-title">Secure Shopping</div>
+                    <div class="service-desc">Your data & privacy are safe with SSL encryption</div>
+                </div>
+            </div>
+        </div>
+       </section>
+
+       <section class="newsletter">
+        <div class="container">
+            <h3>New to Keal-Retail ?</h3>
+            <p>Subscribe to our newsletter to get updates on our latest offers!</p>
+            <div class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter Email Address">
+                <button class="newsletter-btn">SUBSCRIBE</button>
+            </div>
+        </div>
+       </section>
+
+      <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Need Help ?</h4>
+                    <ul>
+                        <li><a href="#">Chat with us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">How to shop on Keal-Retail?</a></li>
+                        <li><a href="#">Corporate & Bulk Purchase</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Keal-Retail</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Keal-Retail careers</a></li>
+                        <li><a href="#">Keal-Retail Express</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Notice</a></li>
+                        <li><a href="#">Keal-Retail Store Credit Terms</a></li>
+                        <li><a href="#">Keal-Retail Payment Information Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Make Money with Keal-Retail</h4>
+                    <ul>
+                        <li><a href="#">Sell on Keal-Retail</a></li>
+                        <li><a href="#">Vendor hub</a></li>
+                        <li><a href="#">Become a logistics Service Partner</a></li>
+                        <li><a href="#">Become a Sales Consultant</a></li>
+                        <li><a href="#">Keal-Retail Partner Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Keal-Retail International</h4>
+                    <ul>
+                        <li><a href="#">Algeria</a></li>
+                        <li><a href="#">Egypt</a></li>
+                        <li><a href="#">Ghana</a></li>
+                        <li><a href="#">Ivory Coast</a></li>
+                        <li><a href="#">Kenya</a></li>
+                        <li><a href="#">Morocco</a></li>
+                        <li><a href="#">Senegal</a></li>
+                        <li><a href="#">Tunisia</a></li>
+                        <li><a href="#">Uganda</a></li>
+                        <li><a href="#">Zando</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Join Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div>
+                        <p>&copy; 2025 Keal-Retail Nigeria. All rights reserved</p>
+                    </div>
+                    <div class="payment-methods">
+                        <span>Payment Methods & Delivery Partners</span>
+                        <div class="payment-method">VISA</div>
+                        <div class="payment-method">Mastercard</div>
+                        <div class="payment-method">Verve</div>
+                        <div class="payment-method">Paypal</div>
+                        <div class="payment-method">DHL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+      <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">X</button>
+            </div>
+            <div class="cart-items">
+                <p>Your cart is empty</p>
+            </div>
+            <div class="cart-total" id="cartTotal">
+                Total: #0.00
+            </div>
+            <button class="checkout-btn" onclick="checkout()">PROCEED TO CHECKOUT</button>
+        </div>
+      </div>
+<script src="script.js"></script>
+</body>
+</html>

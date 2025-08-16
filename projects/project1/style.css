@@ -160,7 +160,7 @@ body{
 .about-image {
     width: 90%;
     height: 520px;
-    background: url('ken3.jpg');
+    background: url('alina.jpg');
     background-size: cover;
     border-radius: 20px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
@@ -364,6 +364,9 @@ body{
 }
 
 @media (max-width: 1200px) {
+    .logo {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
     .nav-container {
         padding: 0.3rem;
     }
@@ -373,6 +376,7 @@ body{
     }
     .hero h1 {
         font-size: 1.8rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .about-content {
         gap: 3rem;
@@ -400,9 +404,11 @@ body{
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 1.7rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .hero p {
         font-size: 1.2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .section h2 {
         font-size: 2.7rem;
@@ -556,11 +562,16 @@ body{
 }
 
 @media (max-width: 767px)  and (min-width: 600px) {
+    .logo {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
     .hero h1 {
         font-size: 1.3rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .hero p{
         font-size: 1.32rem;
+        font-family: Arial, Helvetica, sans-serif;
         
     }
     .btn {
@@ -609,14 +620,17 @@ body{
 @media (max-width: 600px) and (min-width: 481px) {
     .logo {
         font-size: 1.75rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .hero h1 {
         font-size: 1.6rem;
         margin-top: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .hero p {
         font-size: 0.9rem;
         margin-bottom: 1.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .btn {
         padding: 0.9rem 2rem;
@@ -674,14 +688,17 @@ body{
     }
     .logo {
         font-size: 1.6rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .hero h1 {
         font-size: 2.2rem;
         line-height: 1.2;
+        font-family: Arial, Helvetica, sans-serif;
     }
     .hero p{
         font-size: 0.95rem;
         padding: 0 0.5rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .btn {
         padding: 0.8rem 1.8rem;
@@ -744,6 +761,7 @@ body{
     }
     .logo {
         font-size: 1.4rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .hero {
         padding: 0 0.5rem;
@@ -752,10 +770,12 @@ body{
         font-size: 1.8rem;
         line-height: 1.1;
         margin-bottom: 0.8rem;
+        font-family: Arial, Helvetica, sans-serif;
     }
     .hero p {
         font-size: 0.9rem;
         margin-bottom: 1.2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .btn {
         padding: 0.7rem 1.5rem;
@@ -809,6 +829,7 @@ body{
     .contact-form {
         padding: 1.1rem;
         border-radius: 10px;
+        margin-left: ;
     }
     .contact-info h3,
     .contact-form h3 {

@@ -1352,6 +1352,9 @@ footer .container {
     .project-card3 p {
         font-size: 0.75rem;
     }
+    .testimonial-section h2 {
+        font-size: 1.2rem;
+    }
     .testimonial-list {
         gap: 15px;
         padding: 1rem;
@@ -1386,4 +1389,55 @@ footer .container {
         font-size: 0.75rem;
         box-shadow: 0 8px 32px rgba(0,0,0,0.6);
     }
+}
+@media (max-width: 360px) {
+    .work-section h1 {
+        font-size: 1.65rem;
+    }
+    .work-section h2 {
+        font-size: 0.9rem;
+    }
+    .testimonial-section h2 {
+        font-size: 1.2rem;
+    }
+     .work-container {
+        margin-left: 1px;
+        gap: 10px; 
+        width: 350px;  
+    }
+     .project-card1{
+        width: 145px;
+    }
+    .project-card2{
+        width: 190px;
+    }
+    .project-card3{
+        width: 190px;
+    }
+    .project-card4{
+        width: 145px;
+    }
+    .project-card1 a {
+        margin-left: 38px;
+    }
+    .project-card3 a {
+        margin-left: 85px;
+    }
+    .project-card1 h3,
+    .project-card4 h3 {
+        font-size: 1.05rem;
+    }
+    .project-card2 h3,
+    .project-card3 h3 {
+        font-size: 1.1rem;
+    }
+    .project-card2 p {
+        font-size: 0.65rem;
+    }
+    .project-card3 p {
+        font-size: 0.65rem;
+    }
+    .testimonial-list blockquote{
+        font-size: 0.5rem;
+    }   
 }

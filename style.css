@@ -1392,7 +1392,7 @@ footer .container {
 }
 @media (max-width: 360px) {
     .work-section {
-        height: 80vh;
+        height: 100vh;
     }
     .work-section h1 {
         font-size: 1.65rem;
@@ -1406,20 +1406,20 @@ footer .container {
      .work-container {
         margin-left: 1px;
         gap: 10px; 
-        width: 445px; 
-        height: 340px; 
+        width: 350px; 
+        height: 350px; 
     }
      .project-card1{
-        width: 160px;
+        width: 140px;
     }
     .project-card2{
-        width: 245px;
+        width: 190px;
     }
     .project-card3{
-        width: 230px;
+        width: 190px;
     }
     .project-card4{
-        width: 175px;
+        width: 140px;
     }
     .project-card1 a {
         margin-left: 38px;
@@ -1429,11 +1429,11 @@ footer .container {
     }
     .project-card1 h3,
     .project-card4 h3 {
-        font-size: 1.05rem;
+        font-size: 0.8rem;
     }
     .project-card2 h3,
     .project-card3 h3 {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     .project-card2 p {
         font-size: 0.65rem;

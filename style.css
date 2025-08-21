@@ -1391,6 +1391,9 @@ footer .container {
     }
 }
 @media (max-width: 360px) {
+    .work-section {
+        height: 80vh;
+    }
     .work-section h1 {
         font-size: 1.65rem;
     }
@@ -1403,19 +1406,20 @@ footer .container {
      .work-container {
         margin-left: 1px;
         gap: 10px; 
-        width: 350px;  
+        width: 445px; 
+        height: 340px; 
     }
      .project-card1{
-        width: 145px;
+        width: 160px;
     }
     .project-card2{
-        width: 190px;
+        width: 245px;
     }
     .project-card3{
-        width: 190px;
+        width: 230px;
     }
     .project-card4{
-        width: 145px;
+        width: 175px;
     }
     .project-card1 a {
         margin-left: 38px;
@@ -1438,6 +1442,6 @@ footer .container {
         font-size: 0.6rem;
     }
     .testimonial-list blockquote{
-        font-size: 0.5rem;
+        font-size: 0.45rem;
     }   
 }

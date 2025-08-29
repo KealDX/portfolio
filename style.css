@@ -534,12 +534,15 @@ footer {
     text-align: center;
     padding: 1.2rem 0;
     align-content: end;
-    font-weight: bold;
+    font-weight: 550;
 }
 footer .container {
     max-width: 900px;
     margin: 0 auto;
 }
+
+
+
 @media (max-width: 1400px) {
     .logo {
         font-size: 2.3rem;
@@ -1389,10 +1392,13 @@ footer .container {
         font-size: 0.75rem;
         box-shadow: 0 8px 32px rgba(0,0,0,0.6);
     }
+    .footer {
+        font-size: 0.8rem;
+    }
 }
 @media (max-width: 360px) {
     .work-section {
-        height: 100vh;
+        height: 70vh;
     }
     .work-section h1 {
         font-size: 1.65rem;
@@ -1406,26 +1412,34 @@ footer .container {
      .work-container {
         margin-left: 1px;
         gap: 10px; 
-        width: 350px; 
+        width: 320px; 
         height: 350px; 
     }
      .project-card1{
-        width: 140px;
+        width: 125px;
     }
     .project-card2{
-        width: 190px;
+        width: 160px;
     }
     .project-card3{
-        width: 190px;
+        width: 160px;
     }
     .project-card4{
-        width: 140px;
+        width: 125px;
     }
     .project-card1 a {
-        margin-left: 38px;
+        margin-left: 34px;
+        font-size: 0.6rem;
+    }
+    .project-card2 a {
+        font-size: 0.65rem;
     }
     .project-card3 a {
-        margin-left: 85px;
+        margin-left: 60px;
+        font-size: 0.65rem;
+    }
+    .project-card4 a {
+        font-size: 0.6rem;
     }
     .project-card1 h3,
     .project-card4 h3 {
@@ -1435,13 +1449,25 @@ footer .container {
     .project-card3 h3 {
         font-size: 0.9rem;
     }
+    .project-card1 p,
+    .project-card4 p {
+        font-size: 0.7rem;
+        margin-left: 10px;
+        max-width: 100px;
+    }
     .project-card2 p {
         font-size: 0.65rem;
     }
     .project-card3 p {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
+    }
+    .project-link {
+        width: 85px;
     }
     .testimonial-list blockquote{
         font-size: 0.45rem;
     }   
+    .footer p {
+        font-size: 0.7rem;
+    }
 }

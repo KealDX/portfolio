@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Deehex Place</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <!-- Title Section (Left) -->
+        <div class="title-section fade-in">
+            <h1>Reserve Your Table</h1>
+            <p>Experience an unforgettable dining journey at Deehex Place. Book your reservation today and let us create a memorable evening for you.</p>
+        </div>
+
+        <!-- Form Section (Center) -->
+        <div class="contact-form fade-in">
+            <h3>Make a Reservation</h3>
+            <form>
+                <div class="form-group1">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group2">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group3">
+                    <label for="message">Special Requests ?</label>
+                    <textarea id="message" name="message" placeholder="Date, time, party size, dietary restrictions, etc."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Request Reservation</button>
+            </form>
+        </div>
+
+        <!-- Images Section (Right) -->
+        <div class="images-section fade-in">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=250&fit=crop&crop=center" alt="Restaurant Interior">
+            </div>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=400&h=250&fit=crop&crop=center" alt="Fine Dining Experience">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and form handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your reservation request! We will contact you soon to confirm.');
+        });
+    </script>
+
+</body>
+</html>
